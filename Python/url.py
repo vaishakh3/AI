@@ -1,0 +1,20 @@
+import urllib.request
+import webbrowser
+weburl=urllib.request.urlopen('http://www.ted.com/')
+html=weburl.read()
+data=weburl.getcode()
+url=weburl.geturl()
+hd=weburl.headers
+inf=weburl.info()
+print('-'*60)
+print("The URL is: ", url)
+print('-'*60)
+print("HTTP status code is: ", data)
+print('-'*60)
+print("Headers returned : \n", hd)
+print('-'*60)
+print("The info() returned : \n ", inf)
+print('-'*60)
+print("Now opening the URL : ", url)
+webbrowser.open_new(url)
+print('-'*60)
